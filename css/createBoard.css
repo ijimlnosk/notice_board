@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.inner-container {
+  width: 50%;
+  margin: 20px 0;
+  padding: 10px 0;
+  border: 2px solid #ccc;
+  background-color: #afc8dc;
+}
+
+.create-container {
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  margin: 10px 0;
+  background-color: #afc8dc;
+}
+
+.cn-text {
+  text-align: center;
+  font-size: 1em;
+  background-color: #afc8dc;
+}
+
+/* 제목 */
+
+.title {
+  width: 100%;
+  height: 30px;
+}
+.input-title {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding-left: 10px;
+}
+
+/* 부제목 */
+.author {
+  width: 100%;
+  height: 30px;
+}
+
+.input-author {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding-left: 10px;
+}
+
+/* 내용 */
+.detail {
+  width: 100%;
+  height: 600px;
+}
+
+#textarea-detail {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 10px 10px;
+  resize: none;
+}
+
+/* 버튼 */
+.container-btn {
+  width: 30%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 70%;
+}
+
+.cn-btn {
+  background-color: #fff;
+  width: 35%;
+  height: 40px;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 1px 1px 1px #ccc;
+  margin: 5px 5px;
+}
+
+.cn-btn:hover {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}

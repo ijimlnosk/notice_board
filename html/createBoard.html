@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/createBoard.css" />
+    <title>게시글 작성</title>
+  </head>
+  <body>
+    <header th:insert="noti_board/html/createBoard.html"></header>
+    <!-- header -->
+    <div class="header" id="head">
+      <div class="inner-header" id="header-text">
+        <a href="#" class="h-text">게시글 작성</a>
+      </div>
+    </div>
+    <!-- end header -->
+
+    <!-- container -->
+    <div class="container">
+      <form class="inner-container" action="/post" method="post">
+        <p class="cn-text">제목</p>
+        <div class="create-container title">
+          <input
+            name="input-title"
+            type="text"
+            class="cn-inner-input input-title"
+            placeholder="제목을 입력해주세요."
+          />
+        </div>
+        <p class="cn-text">작성자</p>
+        <div class="create-container author">
+          <input
+            name="input-author"
+            type="text"
+            class="cn-inner-input input-author"
+            placeholder="이름을 입력해주세요."
+          />
+        </div>
+        <p class="cn-text">내용</p>
+        <div class="create-container detail">
+          <textarea
+            name="input-detail"
+            id="textarea-detail"
+            cols="30"
+            rows="10"
+            placeholder="내용을 입력해주세요"
+          ></textarea>
+        </div>
+        <div class="container-btn">
+          <button type="button" class="cn-btn cancle">취소</button>
+          <button type="submit" class="cn-btn save">저장</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

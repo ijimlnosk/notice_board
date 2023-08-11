@@ -18,7 +18,7 @@ body {
 }
 
 #create {
-  width: 70%;
+  width: 50%;
   height: 30px;
   margin: auto;
   display: flex;
@@ -37,12 +37,14 @@ body {
 #btn-create:hover {
   cursor: pointer;
   font-size: 1.3rem;
+  color: #fff;
+  background-color: #afc8dc;
 }
 
 .inner-container {
   width: 100%;
   height: calc(100% - 40px);
-  border: 1px solid #ccc;
+  border-top: 1px solid #ccc;
   background-color: #fff;
   display: flex;
   flex-direction: row;

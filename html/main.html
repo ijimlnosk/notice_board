@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/header.css" />
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Moirai+One&family=Noto+Sans+KR&display=swap"
       rel="stylesheet"
     />
-    <script src="./libs/jquery-3.7.0.min.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="../libs/jquery-3.7.0.min.js"></script>
+    <script src="../js/main.js"></script>
     <title>게시판</title>
   </head>
   <body>
@@ -25,9 +25,6 @@
     <!-- end header -->
     <!-- container -->
     <div class="container" id="con">
-      <div id="create">
-        <button type="button" id="btn-create">글 작성하기</button>
-      </div>
       <div class="inner-container" id="inner-con">
         <div class="create-noti">
           <div class="inner-create-noti">
@@ -35,34 +32,35 @@
               <table class="cn-table">
                 <thead>
                   <tr class="cn-tr">
-                    <td class="cn-td cn-tdT">번호</td>
-                    <td class="cn-td cn-tdT">등록일</td>
+                    <td class="cn-td cn-tdT">#</td>
                     <td class="cn-td cn-tdT">제목</td>
                     <td class="cn-td cn-tdT">작성자</td>
+                    <td class="cn-td cn-tdT">작성일</td>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr class="cn-tr">
-                    <td class="cn-td">1</td>
-                    <td class="cn-td">2023-08-08</td>
+                  <tr class="cn-tr" th:each="post : ${postList}">
+                    <th class="cn-td" scope="row"></t>
                     <td class="cn-td">
-                      <a href="#" class="a-text">첫번째 게시글</a>
+                      <a href="@{'/post/' + ${post.id}}">
+                        <span th:text="${post.title}"></span>
+                      </a>
                     </td>
-                    <td class="cn-td">김진솔</td>
-                  </tr>
-                  <tr class="cn-tr">
-                    <td class="cn-td">2</td>
-                    <td class="cn-td">2023-08-08</td>
                     <td class="cn-td">
-                      <a href="#" class="a-text">두번째 게시글</a>
+                      <span th:text="${post.author}"></span>
                     </td>
-                    <td class="cn-td">김진솔</td>
+                    <td class="cn-td">
+                      <span th:text="${#temporals.format(post.createDate, 'yyy-MM-dd HH:mm')}"></span>
+                    </td>
                   </tr>
                 </tbody>
               </table>
             </form>
           </div>
         </div>
+      </div>
+      <div id="create">
+        <button type="button" id="btn-create">글 작성하기</button>
       </div>
     </div>
     <!-- end container -->
