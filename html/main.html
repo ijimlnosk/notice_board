@@ -28,7 +28,7 @@
       <div class="inner-container" id="inner-con">
         <div class="create-noti">
           <div class="inner-create-noti">
-            <form action="#" method="post" class="form">
+            <form action="./main.html" method="post" class="form">
               <table class="cn-table">
                 <thead>
                   <tr class="cn-tr">
@@ -37,22 +37,24 @@
                     <td class="cn-td cn-tdT">작성자</td>
                     <td class="cn-td cn-tdT">작성일</td>
                   </tr>
-                </thead>   
-                <tbody>   
+                </thead>
+                <tbody>
                   <tr class="cn-tr" th:each="post : ${postList}">
-                    <th class="cn-td" scope="row"></t>
+                    <th class="cn-td" scope="row"></th>
                     <td class="cn-td">
                       <a href="@{'/post/' + ${post.id}}">
                         <span th:text="${post.title}"></span>
                       </a>
                     </td>
-                    <td class="cn-td">   
+                    <td class="cn-td">
                       <span th:text="${post.author}"></span>
                     </td>
                     <td class="cn-td">
-                      <span th:text="${#temporals.format(post.createDate, 'yyy-MM-dd HH:mm')}"></span>
+                      <span
+                        th:text="${#temporals.format(post.createDate, 'yyy-MM-dd HH:mm')}"
+                      ></span>
                     </td>
-                  </tr> 
+                  </tr>
                 </tbody>
               </table>
             </form>
